@@ -580,6 +580,7 @@ public class AdminMain extends JFrame implements ActionListener {
 
 	public static void main(String[] args) {
 		new AdminMain();
+		System.out.println("깃 연동");
 	}
 
 }
