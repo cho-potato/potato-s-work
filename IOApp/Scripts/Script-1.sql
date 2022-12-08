@@ -107,6 +107,9 @@ values(seq_topcategory.nextval, '액세서리');
 INSERT INTO topcategory(topcategory_idx, topcategory_name)
 values(seq_topcategory.nextval, '신발');
 
+INSERT INTO topcategory(topcategory_idx, topcategory_name)
+values(seq_topcategory.nextval, '모자');
+
 SELECT * FROM topcategory;
 
 ------------------------------------하위 카테고리 등록------------------------------------------
@@ -201,3 +204,11 @@ from topcategory t, subcategory s, product p
 where t.topcategory_idx = s.topcategory_idx 
 and s.subcategory_idx = p.subcategory_idx
 and product_idx =2;
+
+select s.subcategory_idx as subcategody_idx 
+, subcategory_name
+, product_idx, product_name, brand, price, filename
+from topcategory t, subcategory s, product p
+where t.topcategory_idx = s.topcategory_idx
+and s.subcategory_idx = p.subcategory_idx
+and topcategory_name='상의';
