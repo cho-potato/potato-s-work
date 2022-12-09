@@ -24,8 +24,4 @@ public class SubCategory2 {
 		this.subcategory_name = subcategory_name;
 	}
 	
-
-	
-	
-	
 }

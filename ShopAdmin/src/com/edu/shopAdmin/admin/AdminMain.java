@@ -545,19 +545,20 @@ public class AdminMain extends JFrame implements ActionListener {
 //				downLoad(t_url2); // 지정한 주소로 다운로드 진행
 //				preview(preview2); // 우측 영역에 그림 보여주기
 //			}
+			
+//		지정한 URL 파일 다운로드
+			result = downLoad(t_url2);
 		} else { // 파일 교체를 원하지 않으면 기존 이름을 유지
 			filename = currentProduct.getFilename();
 		}
-		if (result = false) {
-			return;
-		}
+//		if (result = false) {
+//			return;
+//		}
 
-//		지정한 URL 파일 다운로드
-		result = downLoad(t_url2);
 		if (result) {
 //			DB Update
-			Product product = new Product();
-			SubCategory subCategory = new SubCategory();
+			Product product = new Product(); // empty
+			SubCategory subCategory = new SubCategory(); // empty
 
 			product.setSubcategory(subCategory); // 참조관계
 
